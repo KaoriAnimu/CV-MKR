@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0c0c1d;
+  color: #00fff7;
+  font-family: 'Orbitron', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 30px 20px;
+    background-image: url("1358901.png"); /* Your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* fallback text color if needed */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+  
+header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* darken overlay */
+    z-index: -1;
+}
+  
+header h1, header p {
+    position: relative;
+    z-index: 2;
+}
+  
+header h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 5px #00fff7, 0 0 15px #00fff7, 0 0 30px #00fff7;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+nav {
+  text-align: center;
+  margin: 30px 0;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #00fff7;
+  text-decoration: none;
+  font-weight: bold;
+  transition: text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+  text-shadow: 0 0 10px #ff00f7, 0 0 20px #ff00f7;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #00fff7;
+  display: inline-block;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #666;
+}
