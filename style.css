@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+/* Global Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,31 +17,36 @@ body {
 }
 
 header {
-    text-align: center;
-    padding: 60px 20px 30px 20px;
-    background-image: url("1358901.png"); /* Your image file */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white; /* fallback text color if needed */
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
+  text-align: center;
+  padding: 100px 20px 100px 20px;
+  background-image: url("1358901.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 5px solid #00fff7;
+  box-shadow: 0 0 10px #00fff7;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 90%;
 }
-  
+
 header::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* darken overlay */
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
-  
+
 header h1, header p {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
-  
+
 header h1 {
   font-size: 3rem;
   text-shadow: 0 0 5px #00fff7, 0 0 15px #00fff7, 0 0 30px #00fff7;
@@ -77,8 +83,12 @@ nav ul li a:hover {
 }
 
 main {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 section {
@@ -99,21 +109,16 @@ footer {
   color: #666;
 }
 
-.scroll-fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.scroll-fade.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+.scroll-fade,
 .scroll-fade-left,
-.scroll-fade-right {
+.scroll-fade-right,
+.scroll-fade-up {
   opacity: 0;
   transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade {
+  transform: translateY(20px);
 }
 
 .scroll-fade-left {
@@ -124,21 +129,38 @@ footer {
   transform: translateX(40px);
 }
 
-.scroll-fade-left.visible,
-.scroll-fade-right.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 .scroll-fade-up {
-  opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-timing-function: ease-out;
 }
 
+.scroll-fade.visible,
+.scroll-fade-left.visible,
+.scroll-fade-right.visible,
 .scroll-fade-up.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0);
 }
 
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
 
+  nav ul li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .nav-toggle {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
