@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mochammad Kaori Rahadian - CV</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Icon.png" type="image/png" />
 </head>
 <body>
   <header class="glow">
@@ -69,5 +70,21 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <audio id="bg-music" autoplay loop muted>
+    <source src="haveaniceday.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    window.addEventListener('click', () => {
+      const audio = document.getElementById('bg-music');
+      if (audio.muted) {
+        audio.muted = false;
+        audio.volume = 0.2;
+        audio.play();
+      }
+    });
+  </script>
+
 </body>
 </html>
