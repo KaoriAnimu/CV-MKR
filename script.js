@@ -1,3 +1,24 @@
+const secret = 'asdf';
+    let buffer = '';
+
+    const randomLinks = [
+      'https://www.youtube.com/watch?v=htX0c7m3ivA&ab_channel=IsuraMusic',
+      'https://www.youtube.com/watch?v=PxRZ5RwwSFw&ab_channel=revemayuzumi',
+      'https://www.youtube.com/watch?v=gFTicEWzKks&ab_channel=DJDESA',
+    ];
+
+    document.addEventListener('keydown', e => {
+      buffer += e.key.toLowerCase();                
+      if (buffer.length > secret.length) {
+        buffer = buffer.slice(buffer.length - secret.length);
+      }
+     
+      if (buffer === secret) {
+        const url = randomLinks[Math.floor(Math.random() * randomLinks.length)];
+        window.location.href = url;                  
+      }
+    });
+
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.querySelector('.page');
   if (page) page.classList.add('visible');
