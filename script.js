@@ -2,9 +2,9 @@ const secret = 'asdf';
     let buffer = '';
 
     const randomLinks = [
-      'https://www.youtube.com/watch?v=htX0c7m3ivA&ab_channel=IsuraMusic',
-      'https://www.youtube.com/watch?v=PxRZ5RwwSFw&ab_channel=revemayuzumi',
-      'https://www.youtube.com/watch?v=gFTicEWzKks&ab_channel=DJDESA',
+      'https://www.youtube.com/watch?v=htX0c7m3ivA&ab_channel=IsuraMusic?autoplay=1&mute=1',
+      'https://www.youtube.com/watch?v=PxRZ5RwwSFw&ab_channel=revemayuzumi?autoplay=1&mute=1',
+      'https://www.youtube.com/watch?v=gFTicEWzKks&ab_channel=DJDESA?autoplay=1&mute=1',
     ];
 
     document.addEventListener('keydown', e => {
