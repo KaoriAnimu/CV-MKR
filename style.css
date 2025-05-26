@@ -164,3 +164,14 @@ footer {
     font-size: 1.4rem;
   }
 }
+
+.page {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  min-height: 100vh;
+}
+
+.page.visible {
+  opacity: 1;
+}
+
