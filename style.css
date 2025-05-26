@@ -174,3 +174,58 @@ footer {
   opacity: 1;
 }
 
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.about-photo {
+  flex: 1;
+  max-width: 200px;
+  border: 5px solid #00fff7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  min-height: 100vh;
+  background: url("assets/nc.jpg") center/cover no-repeat fixed;
+  
+}
+
+.page {
+  position: relative;
+}
+.page::before {
+  content:"";
+  position:absolute; inset:0;
+  background:rgba(0,0,0,0.6);
+  z-index:1;
+}
+
+.page > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
