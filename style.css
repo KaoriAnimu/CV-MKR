@@ -226,6 +226,70 @@ html, body {
   z-index: 2;
 }
 
+#experience {
+  padding: 40px 20px;
+}
 
+#experience h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #666;
+  display: inline-block;
+  color: inherit; 
+}
 
+.experience-item {
+  margin-bottom: 30px;
+  border-left: 3px solid #888;
+  padding-left: 15px;
+}
 
+.experience-item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: inherit; 
+}
+
+.experience-item p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: inherit;
+}
+
+.experience-item {
+  margin-bottom: 30px;
+  border-left: 3px solid #888;
+  padding-left: 15px;
+}
+
+.experience-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.experience-content img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-content .text {
+  flex: 1;
+}
+
+.experience-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: inherit;
+}
+
+.experience-content p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: inherit;
+}
